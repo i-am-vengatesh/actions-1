@@ -1,15 +1,14 @@
-name: Generate ASCII Artwork
+name: Cowsay Ascii Art Work
 
 
-on:
-  push
+on: push
 
 jobs:
-    ascii-job:
+    first_job:
         runs-on: ubuntu-latest
         steps:
         - name: Checkout Repo
-          uses: action/checkout@v4
+          uses: actions/checkout@v4
 
         - name: Install Cowsay Program
           run: sudo apt-get install cowsay -y
