@@ -12,7 +12,7 @@ jobs:
 
         - name: Exceute Shell Script
           run: |
-            chmod +x shellscript1.sh
+           # chmod +x shellscript1.sh
             ./shellscript1.sh
     
         - name: List Repo files
