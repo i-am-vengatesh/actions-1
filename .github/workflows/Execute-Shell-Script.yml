@@ -4,17 +4,24 @@ name: Execute From Shell Script
 on: push
 
 jobs:
-    shell_job:
+    shell_job-checkout:
         runs-on: ubuntu-latest
         steps:
         - name: Checkout Repo
           uses: actions/checkout@v4
 
+
+    shell_job-Execute:
+        runs-on: ubuntu-latest
+        steps:
         - name: Exceute Shell Script
           run: |
             ls
             chmod +x shellscript1.sh
             ./shellscript1.sh
-    
+
+    shell_job-Build:
+        runs-on: ubuntu-latest
+        steps: 
         - name: List Repo files
           run: ls -ltra
