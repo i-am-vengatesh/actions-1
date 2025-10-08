@@ -9,12 +9,18 @@ jobs:
         steps:
         - name: Checkout Repo
           uses: actions/checkout@v4
+        - name: upload_artifacts
+          uses: actions/upload-artifact@v4
+          with:
+            name: artifacts_file1
+            path: shellscript1.sh
 
 
     shell_job-Execute:
         runs-on: ubuntu-latest
         needs: shell_job-Build
         steps:
+        
         - name: Exceute Shell Script
           run: |
             ls
