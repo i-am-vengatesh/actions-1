@@ -13,6 +13,7 @@ jobs:
 
     shell_job-Execute:
         runs-on: ubuntu-latest
+        needs: shell_job-Build
         steps:
         - name: Exceute Shell Script
           run: |
