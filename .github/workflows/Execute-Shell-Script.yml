@@ -21,6 +21,11 @@ jobs:
         needs: shell_job-Build
         steps:
         
+        - name: upload_artifacts
+          uses: actions/download-artifact@v4
+          with:
+            name: artifacts_file1
+            
         - name: Exceute Shell Script
           run: |
             ls
