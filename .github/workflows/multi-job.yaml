@@ -18,11 +18,13 @@ jobs:
                     ./ascii-script.sh
                     sleep 30
     Test:
+        needs: Build
         runs-on: ubuntu-latest
         steps:
           - name: Test File Exists
             run: grep -i "dragon" dragon.txt
     Deploy:
+        needs: [Build, Test]
         runs-on: ubuntu-latest
         steps: 
           - name: Read File
