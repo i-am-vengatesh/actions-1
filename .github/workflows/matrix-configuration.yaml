@@ -17,6 +17,8 @@ jobs:
   deploy-on-mac:
     runs-on: macos-latest
     steps:
+    - name: Set up Docker
+      uses: docker/setup-buildx-action@v2
     - name: Echo Docker Details
       run: docker info
 
