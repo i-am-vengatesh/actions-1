@@ -16,11 +16,13 @@ jobs:
               run: |
                     chmod +x ascii-script.sh
                     ./ascii-script.sh
+                    
             - name: upload a Dragon text files
-              - uses: actions/upload-artifact@v4
-                with:
+              uses: actions/upload-artifact@v4
+              with:
                 name: dragon-text-file
                 path: dragon.txt
+
     Test:
         needs: Build
         runs-on: ubuntu-latest
@@ -28,8 +30,8 @@ jobs:
           - name: Test File Exists
             run: grep -i "dragon" dragon.txt
           - name: download a Dragon text files
-              - uses: actions/download-artifact@v4
-                with:
+            uses: actions/download-artifact@v4
+            with:
                 name: dragon-text-file
                 
     Deploy:
@@ -39,6 +41,6 @@ jobs:
           - name: Read File
             run: cat dragon.txt
          - name: download a Dragon text files
-              - uses: actions/download-artifact@v4
-                with:
+           uses: actions/download-artifact@v4
+           with:
                 name: dragon-text-file
