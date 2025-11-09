@@ -12,8 +12,10 @@ jobs:
               run: |
                     echo "God is Always Great!"
                     ls -ltr
-            - name: Install cowsay
-              run: ./ascii-script.sh
-            
+            - name: Executing Cowsay Script
+              run: |
+                    chmod +x ascii-script.sh
+                    ./ascii-script.sh
+                            
             
             
