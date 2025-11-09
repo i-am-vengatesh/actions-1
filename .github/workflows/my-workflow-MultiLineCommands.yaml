@@ -1,4 +1,4 @@
-name: my-first-workflow
+name: my-first-workflow-multiline-with-thirdpartylibrary
 
 on: push
 
