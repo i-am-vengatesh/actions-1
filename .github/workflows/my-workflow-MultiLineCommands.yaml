@@ -7,7 +7,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Install cowsay
-              run: sudo apt-get Install cowsay -y
+              run: sudo apt-get install cowsay -y
             - name: Checkout Repo
               uses: actions/checkout@v4
             - name: List and Read files
