@@ -1,0 +1,29 @@
+name: Mult-Job
+
+on: push
+
+jobs:
+    Build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Repo
+              uses: actions/checkout@v4
+            - name: List and Read files
+              run: |
+                    echo "God is Always Great!"
+                    ls -ltr
+            - name: Executing Cowsay Script
+              run: |
+                    chmod +x ascii-script.sh
+                    ./ascii-script.sh
+                    sleep 30
+    Test:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Test File Exists
+            run: grep -i "dragon" dragon.txt
+    Deploy:
+        runs-on: ubuntu-latest
+        steps: 
+          - name: Read File
+            run: cat dragon.txt
