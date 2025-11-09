@@ -6,19 +6,19 @@ jobs:
     first_job:
         runs-on: ubuntu-latest
         steps:
-            - name: Install cowsay
-              run: sudo apt-get install cowsay -y
             - name: Checkout Repo
               uses: actions/checkout@v4
+            - name: Install cowsay
+              run: sudo apt-get install cowsay -y
+            - name: Generate ASCII Artwork
+              run: cowsay -f dragon "Run for cover, I am a DRAGON....RAWR" >> dragon.txt
+            - name: Test File Exists
+              run: grep -i "dragon" dragon.txt
+            - name: Read File
+              run: cat dragon.txt
+            
             - name: List and Read files
               run: |
                     echo "God is Always Great!"
                     ls -ltr
-                    cat REAME.md
-            - name: Generate ASCII Artwork
-              run: cowsay -f dragon "Run for cover, I am a DRAGON....RAWR" >> dragon.txt
-            # - name: List files
-            #   run: ls
-            # - name: Read file
-            #   run: cat README.md
             
