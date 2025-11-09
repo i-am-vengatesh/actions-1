@@ -14,11 +14,9 @@ jobs:
     - name: Run Images
       run: docker run hello-world
 
-  deploy-on-mac:
-    runs-on: macos-latest
+  deploy-on-windows:
+    runs-on: windows-latest
     steps:
-    - name: Set up Docker
-      uses: docker/setup-buildx-action@v2
     - name: Echo Docker Details
       run: docker info
 
