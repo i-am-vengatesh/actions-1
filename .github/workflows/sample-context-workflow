@@ -1,6 +1,7 @@
 name: Context testing
 on: 
   push:
+  dispatch:
 
 
 jobs:
