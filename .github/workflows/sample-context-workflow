@@ -1,7 +1,5 @@
 name: Context testing
-on: 
-  push:
-  dispatch:
+on: push
 
 
 jobs:
