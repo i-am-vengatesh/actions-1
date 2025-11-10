@@ -6,7 +6,6 @@ on:
 
 jobs:
   deploy:
-    if: github.ref=='refs/head/main'
     strategy:
       fail-fast: false
       max-parallel: 5
